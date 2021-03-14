@@ -1,0 +1,1 @@
+<?php echo wp_kses_post(wpautop(get_field('field'))) ?>
