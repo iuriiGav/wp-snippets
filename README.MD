@@ -6,3 +6,8 @@
 
 ### wp-filters
 [Remove page template option from dropdown](wp-filters/remove-page-templates-from-dropdown.php)
+
+
+### wp-admin  
+[Add page for API Keys Registering](wp-admin/api-key-page.php)
+
