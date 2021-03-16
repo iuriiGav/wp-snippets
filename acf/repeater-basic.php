@@ -4,7 +4,7 @@ if( have_rows('repeater_field_name') ):
 
     while( have_rows('repeater_field_name') ) : the_row(); 
 
-        $sub = get_sub_field('sub');
+        $field_name = get_sub_field('field_name');
 
         ?>
 

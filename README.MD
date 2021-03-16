@@ -5,7 +5,9 @@
 [Escape and echo text area user input](acf/esc-text-area.php)  
 
 ### wp-filters
-[Remove page template option from dropdown](wp-filters/remove-page-templates-from-dropdown.php)
+[Remove page template option from dropdown](wp-filters/remove-page-templates-from-dropdown.php)  
+[Get attachment image width and height](wp-filters/get-attachment-width-height.php)  
+
 
 
 ### wp-admin  
