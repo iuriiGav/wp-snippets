@@ -3,6 +3,10 @@
 [Repeater Basic Loop](acf/repeater-basic.php)  
 [Get radio input value](acf/get-radio-value.php)  
 [Escape and echo text area user input](acf/esc-text-area.php)  
+[Get image and alt by id](acf/get_image_by_field.php)  
+[Query post by a repeater field](acf/query-by-repeater-field.php)  
+
+Make the afc functions inderstood by intelisense using this cl command: composer require --dev paulthewalton/acf-stubs "*"
 
 ### wp-filters
 [Remove page template option from dropdown](wp-filters/remove-page-templates-from-dropdown.php)  
@@ -11,5 +15,9 @@
 
 
 ### wp-admin  
-[Add page for API Keys Registering](wp-admin/api-key-page.php)
+[Add page for API Keys Registering](wp-admin/api-key-page.php)  
+
+
+### javascript
+[add decoration to parrent if submenu is active](js/dropdown-children-active-decoration.js)  
 
