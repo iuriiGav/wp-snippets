@@ -11,6 +11,8 @@ Make the afc functions inderstood by intelisense using this cl command: composer
 ### wp-filters
 [Remove page template option from dropdown](wp-filters/remove-page-templates-from-dropdown.php)  
 [Get attachment image width and height](wp-filters/get-attachment-width-height.php)  
+[Get day of the week in correct language](wp-filters/get-day-of-the-week-on-needed-language.php)  
+[Remove default image sizes](wp-filters/remove-default-image-sizes.php)  
 
 
 
