@@ -1,0 +1,43 @@
+.top-scrollerx--container {
+  transition: all 0.2s ease;
+  background: rgba(0,0,0,.35);
+padding: 1em;
+opacity: .4;
+position: absolute;
+      bottom: 10px;
+      left: 50px;
+      z-index: 999;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 1;
+   
+      }
+
+        @media only screen and (max-width: 724px) {
+          display: none;
+        }
+
+}
+
+.top-scrollerx {
+  
+      font-size: 2em;
+      text-align: center;
+      height: 30px;
+      width: 30px;
+      border-radius: 2%;
+
+      line-height: 40px;
+      & img{
+        position: relative;
+        z-index: 1000;
+      }
+
+      & svg:hover {
+        margin-bottom: 20px;
+      color: var(--text-gold);
+
+      }
+  
+  }
