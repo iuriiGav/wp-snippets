@@ -16,6 +16,8 @@ Make the afc functions inderstood by intelisense using this cl command: composer
 [Remove default image sizes](wp-filters/remove-default-image-sizes.php)  
 [Get page ID by page template](wp-filters/get-page-id-by-template-name.php)  
 [Paginate multiple queries on one page](wp-filters/paginate-multiple-queries-in-one-page.php)  
+[Fix media library crop tool not working](wp-filters/fix-media-library-crop-tool.php)  
+[Fix media library crop tool not working](wp-filters/check-current-language.php)  
 
 
 
