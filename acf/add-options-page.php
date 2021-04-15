@@ -1,5 +1,5 @@
 <?php 
-// add options page with advanced custom fields plugin
+// add options page with advanced custom fields PRO plugin
 
 if( function_exists('acf_add_options_page')) : 
     acf_add_options_page(

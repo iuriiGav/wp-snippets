@@ -1,0 +1,11 @@
+.ig_loading-spinner {
+    background-image: url("images/ajax-load-spinner.svg");
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -100px;
+    z-index: 1000;
+  }
