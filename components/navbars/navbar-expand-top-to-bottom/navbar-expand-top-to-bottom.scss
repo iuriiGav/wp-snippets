@@ -1,0 +1,228 @@
+// import mixins if they exist,
+// otherwise add these:
+// @mixin flex-cc {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+// @mixin absolute-center-center {
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+// }
+
+
+
+@import "../../../mixins/mixins";
+
+
+$text-color: var(--color-dark);
+$background-color:  var(--color-white);
+
+
+
+body {
+    // remove this as this is for testing purposes only;
+    background: $text-color; 
+  }
+
+// optional text logo with tagline
+.ig-nav-logo {
+  &__text {
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    color: $text-color;
+    z-index: 6;
+    font-size: 20px;
+    font-weight: 900;
+    font-family: sans-serif;
+    text-transform: uppercase;
+  }
+
+  &__tagline {
+    text-transform: none;
+    color: $text-color;
+    opacity: 0.5;
+    font-weight: 300;
+    font-size: 12px;
+  }
+}
+
+// toggle button
+.ig-navbar-toggler-btn {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  height: 20px;
+  width: 25px;
+  z-index: 5;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:focus {
+    opacity: 0.5;
+  }
+  // toggle button burger elements styling
+  &__trigger {
+    & + label {
+      span {
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        top: 50%;
+        margin-top: -1px;
+        left: 0;
+        display: block;
+        background: $text-color;
+        transition: 0.5s;
+      }
+      span:first-child {
+        top: 3px;
+      }
+      span:last-child {
+        top: 16px;
+      }
+    }
+    &:checked + label {
+      span {
+        opacity: 0;
+        top: 50%;
+      }
+      span:first-child {
+        opacity: 1;
+        transform: rotate(405deg);
+      }
+      span:last-child {
+        opacity: 1;
+        transform: rotate(-405deg);
+      }
+    }
+    // pressed button opening the full screen nav
+    &:checked ~ nav {
+      height: 100%;
+      transition-delay: 0s;
+      @include flex-cc;
+      > ul {
+          visibility : visible;
+        > li {
+          opacity: 1;
+        //   transition-delay: 0.5s;
+        }
+      }
+    }
+  }
+}
+
+.ig-navbar-container {
+  background: $background-color;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 3;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+  overflow: hidden;
+
+  & .ig-main-navbar {
+    text-align: center;
+    visibility: hidden;
+    @include absolute-center-center;
+  }
+
+  & .ig-nav-item {
+    opacity: 0;
+    transition: 0.5s;
+    transition-delay: 0s;
+    position: relative;
+    box-sizing: border-box;
+ 
+    &:hover {
+        cursor: pointer;
+        transition-delay: 0;
+        box-shadow:inset 0px 0px 0px 1px $text-color;
+    }
+  }
+  & .ig-nav-link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $text-color;
+    font-weight: 700;
+    font-family: sans-serif;
+    display: inline-block;
+    padding: 30px;
+  }
+}
+
+
+.ig-main-navbar li {
+    transition: 0.5s;
+  transition-delay: 0s;
+}
+
+
+
+
+
+.ig-dropdown-menu {
+  position: absolute;
+  left: 100%;
+  top: 0px;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+//   display: none;
+  transition: all .2s ease;
+
+      @media only screen and (max-width: $bp-md) {
+          left: 0;
+          top: inherit;
+          background-color: darken(#eee, 20%);
+          z-index: 100;
+
+      }
+
+  & .ig-nav-item {
+    opacity: 1;
+    // display: block;
+    transition: 0.5s;
+    transition-delay: 0s;
+  }
+  & .ig-dropdown-item {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $text-color;
+    font-weight: 400;
+    font-family: sans-serif;
+    display: inline-block;
+    padding: 30px;
+  }
+}
+
+.ig-dropdown:hover > ul,
+.ig-dropdown:focus-within > ul,
+.ig-dropdown ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+
+// accessibility styling
+
+.ig-navbar-container .ig-nav-link, .ig-dropdown-menu li a {
+    &:focus {
+        color: lighten($color: #000000, $amount: 50%)
+    }
+}
+
+.ig-dropdown:focus-within {
+    color: lighten($color: #000000, $amount: 50%)
+  
+  }
